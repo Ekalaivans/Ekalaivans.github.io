@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ekalaivan Subramanian — Embedded Systems Engineer</title>
+<meta name="description" content="Portfolio of Ekalaivan Subramanian, Embedded Software Developer working on EtherCAT industrial control, real-time Linux firmware, and IoT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a href="#top" class="brand">ekalaivan<span class="cursor-blink">_</span></a>
+    <nav class="nav">
+      <a href="#console">console</a>
+      <a href="#stack">stack</a>
+      <a href="#projects">projects</a>
+      <a href="#experience">experience</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO: boot / serial console -->
+  <section class="hero" id="console">
+    <div class="wrap">
+      <div class="term" role="img" aria-label="Simulated serial console boot log introducing Ekalaivan Subramanian">
+        <div class="term__bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="term__title">/dev/ttyUSB0 — 115200,8,N,1</span>
+        </div>
+        <pre class="term__body" id="bootlog" aria-hidden="true"></pre>
+      </div>
+      <p class="hero__sub">
+        Scroll down, or run <code>./explore.sh</code> — either works.
+      </p>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section" id="stack">
+    <div class="wrap">
+      <p class="eyebrow">~/stack --list</p>
+      <h2 class="h2">what runs under the hood</h2>
+      <div class="stackgrid">
+        <div class="stackcol">
+          <h3 class="stackcol__title">os</h3>
+          <ul class="taglist">
+            <li>Linux (Embedded)</li><li>PREEMPT_RT</li><li>RTOS</li><li>Windows</li>
+          </ul>
+        </div>
+        <div class="stackcol">
+          <h3 class="stackcol__title">programming</h3>
+          <ul class="taglist">
+            <li>C</li><li>C++</li><li>Embedded C</li><li>Shell scripting</li><li>Python</li>
+          </ul>
+        </div>
+        <div class="stackcol">
+          <h3 class="stackcol__title">protocols</h3>
+          <ul class="taglist">
+            <li>EtherCAT</li><li>CAN</li><li>UART</li><li>I2C</li><li>SPI</li><li>TCP/IP</li><li>MQTT</li>
+          </ul>
+        </div>
+        <div class="stackcol">
+          <h3 class="stackcol__title">domains</h3>
+          <ul class="taglist">
+            <li>Firmware programming</li><li>Functional safety (ISO&nbsp;26262)</li><li>MISRA&nbsp;C</li><li>OSI model</li>
+          </ul>
+        </div>
+        <div class="stackcol">
+          <h3 class="stackcol__title">build tools</h3>
+          <ul class="taglist">
+            <li>CMake</li><li>Linux Buildroot</li><li>Make</li><li>Git</li><li>GitHub / GitLab</li>
+          </ul>
+        </div>
+        <div class="stackcol">
+          <h3 class="stackcol__title">hardware</h3>
+          <ul class="taglist">
+            <li>STM32</li><li>TI AM437x</li><li>ESP8266 / ESP32</li><li>Raspberry Pi</li><li>PIC16F</li><li>Beckhoff industrial controllers</li>
+          </ul>
+        </div>
+        <div class="stackcol">
+          <h3 class="stackcol__title">dev tools</h3>
+          <ul class="taglist">
+            <li>STM32CubeIDE</li><li>VS Code</li><li>Valgrind</li><li>Logic analyzer</li><li>Oscilloscope</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section--alt" id="projects">
+    <div class="wrap">
+      <p class="eyebrow">~/projects --status=public</p>
+      <h2 class="h2">repositories</h2>
+
+      <div class="repolog">
+        <div class="repolog__head">
+          <span>name</span><span>lang</span><span>focus</span><span class="repolog__link-head">link</span>
+        </div>
+
+        <article class="repo">
+          <h3 class="repo__name">smart-irrigation-system-with-ESP8266</h3>
+          <span class="repo__lang"><i class="dotlang" style="--c:#f1c40f"></i>C</span>
+          <p class="repo__desc">Soil-moisture-driven irrigation controller on ESP8266, automating watering cycles from live sensor readings.</p>
+          <a class="repo__link" href="https://github.com/Ekalaivans/smart-irrigation-system-with-ESP8266" target="_blank" rel="noopener">view →</a>
+        </article>
+
+        <article class="repo">
+          <h3 class="repo__name">human-presence-detection</h3>
+          <span class="repo__lang"><i class="dotlang" style="--c:#5eb1ff"></i>Python</span>
+          <p class="repo__desc">Real-time human detection using a pretrained OpenCV model, tuned for low-light accuracy on embedded hardware.</p>
+          <a class="repo__link" href="https://github.com/Ekalaivans/human-presence-detection" target="_blank" rel="noopener">view →</a>
+        </article>
+
+        <article class="repo">
+          <h3 class="repo__name">Temperature-based-fan-control-system</h3>
+          <span class="repo__lang"><i class="dotlang" style="--c:#f1c40f"></i>C</span>
+          <p class="repo__desc">Automatic fan speed control on STM32F407, closing the loop on live temperature readings.</p>
+          <a class="repo__link" href="https://github.com/Ekalaivans/Temperature-based-fan-control-system" target="_blank" rel="noopener">view →</a>
+        </article>
+
+        <article class="repo">
+          <h3 class="repo__name">stm32-distance-measurement</h3>
+          <span class="repo__lang"><i class="dotlang" style="--c:#f1c40f"></i>C</span>
+          <p class="repo__desc">Ultrasonic distance measurement on STM32, driven straight from timer and GPIO registers.</p>
+          <span class="repo__link repo__link--soon">repo: private</span>
+        </article>
+
+        <article class="repo">
+          <h3 class="repo__name">STM32F446RE-led-blink</h3>
+          <span class="repo__lang"><i class="dotlang" style="--c:#f1c40f"></i>C</span>
+          <p class="repo__desc">Bare-metal GPIO control on the STM32F446RE Nucleo board — register-level, no HAL shortcuts.</p>
+          <a class="repo__link" href="https://github.com/Ekalaivans/STM32F446RE-led-blink" target="_blank" rel="noopener">view →</a>
+        </article>
+
+        <article class="repo">
+          <h3 class="repo__name">STM32F4-Discover-onboard-LED-S-BLINK</h3>
+          <span class="repo__lang"><i class="dotlang" style="--c:#f1c40f"></i>C</span>
+          <p class="repo__desc">Driving all onboard LEDs on the STM32F4 Discovery board direct from registers.</p>
+          <a class="repo__link" href="https://github.com/Ekalaivans/STM32F4-Discover-onboard-LED-S-BLINK" target="_blank" rel="noopener">view →</a>
+        </article>
+      </div>
+
+      <p class="learning-note">Also cutting teeth on Raspberry Pi and PIC16F fundamentals alongside the STM32 and ESP work above.</p>
+
+      <a class="see-all" href="https://github.com/Ekalaivans?tab=repositories" target="_blank" rel="noopener">ls -la github.com/Ekalaivans →</a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <p class="eyebrow">~/experience --verbose</p>
+      <h2 class="h2">where the firmware ships</h2>
+
+      <div class="job">
+        <div class="job__meta">
+          <span class="job__role">Embedded Software Developer</span>
+          <span class="job__time">Mar 2025 — present</span>
+        </div>
+        <div class="job__org">ERL Sensors and Automation, Chennai</div>
+
+        <div class="subjob">
+          <h4 class="subjob__title">// NSK steering EPS test bench</h4>
+          <ul class="joblist">
+            <li>Started on this platform as a debugger, isolating faults in EtherCAT communication and sensor feedback before moving into feature firmware.</li>
+            <li>Built C/C++ firmware on Linux with EtherCAT real-time communication, hitting sub-1ms control loop latency for precision torque and angle measurement.</li>
+          </ul>
+        </div>
+
+        <div class="subjob">
+          <h4 class="subjob__title">// hydraulic suspension test bench</h4>
+          <ul class="joblist">
+            <li>Owned the system end-to-end — drafted the hardware schematics and wiring in AutoCAD before a single line of firmware was written.</li>
+            <li>Took it from schematic to firmware: low-level register-based drivers on Beckhoff industrial controllers, EtherCAT master–slave architecture, strict 1ms real-time control loop.</li>
+            <li>Tuned kernel-level (PREEMPT_RT) scheduling and interrupt handling to hold that timing under load across 10+ concurrent sensor channels.</li>
+            <li>Added MQTT telemetry for remote monitoring and diagnostics alongside the real-time control path.</li>
+          </ul>
+        </div>
+
+        <div class="subjob">
+          <h4 class="subjob__title">// safety, quality &amp; automation</h4>
+          <ul class="joblist">
+            <li>Applied MISRA C guidelines through the firmware, with fault detection, watchdogs, and emergency-stop protocols aligned to automotive functional safety (ISO 26262) expectations.</li>
+            <li>Built a Python test-automation framework for regression testing and data validation, cutting manual QA effort ~40% and lifting test coverage from ~60% to ~85%.</li>
+            <li>Debugged signal integrity issues in high-speed EtherCAT links and sensor calibration using oscilloscopes and logic analyzers.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--alt" id="contact">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow">~/contact --open</p>
+      <h2 class="h2">get in touch</h2>
+      <p class="contact__line">Open to embedded, firmware, and industrial control roles — always glad to talk shop about EtherCAT, real-time systems, or IoT.</p>
+      <div class="contact__links">
+        <a href="https://github.com/Ekalaivans" target="_blank" rel="noopener">github.com/Ekalaivans</a>
+        <a href="https://www.linkedin.com/in/ekalaivan21/" target="_blank" rel="noopener">linkedin.com/in/ekalaivan21</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <span>© <span id="year"></span> Ekalaivan Subramanian</span>
+    <span class="footer__status"><i class="statusdot"></i> status: online</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
