@@ -1,228 +1,664 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ekalaivan Subramanian — Embedded Systems Engineer</title>
-<meta name="description" content="Portfolio of Ekalaivan Subramanian, Embedded Software Developer working on EtherCAT industrial control, real-time Linux firmware, and IoT.">
+<title>Ekalaivan Subramanian | Embedded Software & Firmware Engineer</title>
+<meta name="description" content="Portfolio of Ekalaivan Subramanian — Embedded Software Developer specializing in EtherCAT real-time industrial control, PREEMPT_RT/Xenomai Linux, STM32 firmware, and automotive test bench systems.">
+<meta name="keywords" content="Ekalaivan Subramanian, Embedded Software Developer, Firmware Engineer, EtherCAT, PREEMPT_RT, Real-Time Linux, STM32, Embedded C, Industrial Automation, Chennai, Bangalore">
+
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="scanlines" aria-hidden="true"></div>
+<!-- Ambient PCB background animation -->
+<div class="fw-backdrop" aria-hidden="true"></div>
+<div class="scanline-overlay" aria-hidden="true"></div>
 
+<!-- NAVIGATION BAR -->
 <header class="topbar">
   <div class="wrap topbar__inner">
-    <a href="#top" class="brand">ekalaivan<span class="cursor-blink">_</span></a>
+    <a href="#top" class="brand">
+      <span class="brand__icon">⚡</span>
+      <span class="brand__name">ekalaivan<span class="brand__accent">.fw</span></span>
+      <span class="brand__badge"><span class="pulse-dot"></span> 1ms RT-LOOP</span>
+    </a>
+    
     <nav class="nav">
-      <a href="#console">console</a>
-      <a href="#stack">stack</a>
-      <a href="#projects">projects</a>
-      <a href="#experience">experience</a>
-      <a href="#contact">contact</a>
+      <a href="#overview" class="nav__link">Overview</a>
+      <a href="#oscilloscope" class="nav__link">Live Signal</a>
+      <a href="#experience" class="nav__link">Experience</a>
+      <a href="#projects" class="nav__link">Projects</a>
+      <a href="#stack" class="nav__link">Tech Stack</a>
+      <a href="#education" class="nav__link">Education</a>
+      <a href="#contact" class="nav__link nav__link--highlight">Contact</a>
     </nav>
+
+    <div class="topbar__actions">
+      <button class="btn btn--cli" id="cliToggleBtn" title="Toggle Interactive UNIX Terminal">
+        <span class="btn__icon">$_</span> CLI Shell
+      </button>
+      <a href="Ekalaivan_Resume_.pdf" target="_blank" class="btn btn--primary" title="Download Resume PDF">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resume PDF
+      </a>
+    </div>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- HERO: boot / serial console -->
-  <section class="hero" id="console">
-    <div class="wrap">
-      <div class="term" role="img" aria-label="Simulated serial console boot log introducing Ekalaivan Subramanian">
-        <div class="term__bar">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          <span class="term__title">/dev/ttyUSB0 — 115200,8,N,1</span>
+  <!-- HERO SECTION -->
+  <section class="hero" id="overview">
+    <div class="wrap hero__grid">
+      
+      <!-- HERO TEXT -->
+      <div class="hero__content">
+        <div class="status-pill">
+          <span class="status-pill__dot"></span>
+          <span>AVAILABLE FOR EMBEDDED & FIRMWARE ROLES (CHENNAI / BANGALORE)</span>
         </div>
-        <pre class="term__body" id="bootlog" aria-hidden="true"></pre>
+
+        <h1 class="hero__title">
+          Building <span class="text-gradient">Real-Time EtherCAT</span> & Embedded Software That Controls Physical Hardware.
+        </h1>
+
+        <p class="hero__lead">
+          Embedded Software Developer with <strong>1.5+ years of production experience</strong> building deterministic control loops, real-time PREEMPT_RT/Xenomai Linux firmware, and EtherCAT master architectures for automotive hydraulic and servo test benches deployed in <strong>Japan and Thailand</strong>.
+        </p>
+
+        <!-- KPI METRICS -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <span class="kpi-card__val">&lt; 1 ms</span>
+            <span class="kpi-card__lbl">RT Control Loop Latency</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-card__val">0 Defect</span>
+            <span class="kpi-card__lbl">Post-Deploy Record (Japan/Thai)</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-card__val">40% QA</span>
+            <span class="kpi-card__lbl">Time Saved via Python Automation</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-card__val">85%</span>
+            <span class="kpi-card__lbl">Automated Test Coverage Boost</span>
+          </div>
+        </div>
+
+        <!-- ACTION BUTTONS -->
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--hero-primary">Explore Engineering Projects</a>
+          <a href="mailto:ekalaivan28@gmail.com" class="btn btn--hero-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Contact Ekalaivan
+          </a>
+          <button class="btn btn--hero-outline" onclick="copyEmail()">
+            <span id="copyEmailText">Copy Email</span>
+          </button>
+        </div>
       </div>
-      <p class="hero__sub">
-        Scroll down, or run <code>./explore.sh</code> — either works.
-      </p>
+
+      <!-- HERO PROFILE IMAGE & HARDWARE BADGE -->
+      <div class="hero__media">
+        <div class="profile-frame">
+          <div class="profile-frame__glow"></div>
+          <img src="assets/ekalaivan_profile.png" alt="Ekalaivan Subramanian — Embedded Software Developer" class="profile-frame__img">
+          
+          <!-- OVERLAY TECH HUD -->
+          <div class="hud-tag hud-tag--top">
+            <span class="hud-tag__label">SYSTEM STATUS</span>
+            <span class="hud-tag__val"><i class="dot-online"></i> ONLINE (PREEMPT_RT)</span>
+          </div>
+
+          <div class="hud-tag hud-tag--bottom">
+            <span class="hud-tag__name">EKALAIVAN SUBRAMANIAN</span>
+            <span class="hud-tag__role">Embedded Software & Firmware Engineer</span>
+            <div class="hud-tag__chips">
+              <span>EtherCAT</span><span>STM32</span><span>C/C++</span><span>Beckhoff</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- STACK -->
-  <section class="section" id="stack">
+  <!-- LIVE OSCILLOSCOPE & SIGNAL SIMULATOR -->
+  <section class="section section--dark" id="oscilloscope">
     <div class="wrap">
-      <p class="eyebrow">~/stack --list</p>
-      <h2 class="h2">what runs under the hood</h2>
-      <div class="stackgrid">
-        <div class="stackcol">
-          <h3 class="stackcol__title">os</h3>
-          <ul class="taglist">
-            <li>Linux (Embedded)</li><li>PREEMPT_RT</li><li>RTOS</li><li>Windows</li>
-          </ul>
+      <div class="section-header">
+        <p class="eyebrow">// REAL-TIME HARDWARE INTERACTION</p>
+        <h2 class="h2">Interactive Signal & Timing Simulator</h2>
+        <p class="section-desc">Simulate real-time signals, cycle jitter, and PWM duty cycles directly in your browser.</p>
+      </div>
+
+      <div class="scope-container">
+        <div class="scope-header">
+          <div class="scope-title">
+            <span class="scope-dot"></span> RIGOL-SIM DS1054Z — Real-Time Signal Analyzer
+          </div>
+          <div class="scope-metrics">
+            <span class="metric-item">FREQ: <strong id="scopeFreqDisp">1000 Hz</strong></span>
+            <span class="metric-item">CYCLE TIME: <strong id="scopeCycleDisp">1.00 ms</strong></span>
+            <span class="metric-item">JITTER: <strong id="scopeJitterDisp">±4.2 µs</strong></span>
+            <span class="metric-item">CRC: <strong class="text-green">PASS</strong></span>
+          </div>
         </div>
-        <div class="stackcol">
-          <h3 class="stackcol__title">programming</h3>
-          <ul class="taglist">
-            <li>C</li><li>C++</li><li>Embedded C</li><li>Shell scripting</li><li>Python</li>
-          </ul>
+
+        <div class="scope-screen">
+          <canvas id="scopeCanvas" width="900" height="260"></canvas>
+          <div class="scope-grid-overlay"></div>
         </div>
-        <div class="stackcol">
-          <h3 class="stackcol__title">protocols</h3>
-          <ul class="taglist">
-            <li>EtherCAT</li><li>CAN</li><li>UART</li><li>I2C</li><li>SPI</li><li>TCP/IP</li><li>MQTT</li>
-          </ul>
-        </div>
-        <div class="stackcol">
-          <h3 class="stackcol__title">domains</h3>
-          <ul class="taglist">
-            <li>Firmware programming</li><li>Functional safety (ISO&nbsp;26262)</li><li>MISRA&nbsp;C</li><li>OSI model</li>
-          </ul>
-        </div>
-        <div class="stackcol">
-          <h3 class="stackcol__title">build tools</h3>
-          <ul class="taglist">
-            <li>CMake</li><li>Linux Buildroot</li><li>Make</li><li>Git</li><li>GitHub / GitLab</li>
-          </ul>
-        </div>
-        <div class="stackcol">
-          <h3 class="stackcol__title">hardware</h3>
-          <ul class="taglist">
-            <li>STM32</li><li>TI AM437x</li><li>ESP8266 / ESP32</li><li>Raspberry Pi</li><li>PIC16F</li><li>Beckhoff industrial controllers</li>
-          </ul>
-        </div>
-        <div class="stackcol">
-          <h3 class="stackcol__title">dev tools</h3>
-          <ul class="taglist">
-            <li>STM32CubeIDE</li><li>VS Code</li><li>Valgrind</li><li>Logic analyzer</li><li>Oscilloscope</li>
-          </ul>
+
+        <div class="scope-controls">
+          <div class="control-group">
+            <label for="signalSelect">Signal Mode:</label>
+            <select id="signalSelect" class="form-select">
+              <option value="ethercat">EtherCAT 1ms Sync Bus (Sub-1ms Realtime)</option>
+              <option value="pwm">PWM Fan Thermal Regulation (STM32 Timer)</option>
+              <option value="pid">Hydraulic Actuator PID Closed-Loop Step Response</option>
+              <option value="lvdt">LVDT Position Feedback (ADC 12-bit)</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="freqRange">Target Frequency (Hz):</label>
+            <input type="range" id="freqRange" min="100" max="2000" step="50" value="1000" class="form-range">
+            <span id="freqVal">1000 Hz</span>
+          </div>
+
+          <div class="control-group">
+            <label for="dutyRange">Duty Cycle / Gain (%):</label>
+            <input type="range" id="dutyRange" min="10" max="90" step="5" value="50" class="form-range">
+            <span id="dutyVal">50%</span>
+          </div>
+
+          <div class="control-actions">
+            <button class="btn btn--scope" id="scopePauseBtn">Pause Waveform</button>
+            <button class="btn btn--scope-amber" id="injectJitterBtn">Inject Jitter Pulse</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section class="section section--alt" id="projects">
-    <div class="wrap">
-      <p class="eyebrow">~/projects --status=public</p>
-      <h2 class="h2">repositories</h2>
-
-      <div class="repolog">
-        <div class="repolog__head">
-          <span>name</span><span>lang</span><span>focus</span><span class="repolog__link-head">link</span>
-        </div>
-
-        <article class="repo">
-          <h3 class="repo__name">smart-irrigation-system-with-ESP8266</h3>
-          <span class="repo__lang"><i class="dotlang" style="--c:#f1c40f"></i>C</span>
-          <p class="repo__desc">Soil-moisture-driven irrigation controller on ESP8266, automating watering cycles from live sensor readings.</p>
-          <a class="repo__link" href="https://github.com/Ekalaivans/smart-irrigation-system-with-ESP8266" target="_blank" rel="noopener">view →</a>
-        </article>
-
-        <article class="repo">
-          <h3 class="repo__name">human-presence-detection</h3>
-          <span class="repo__lang"><i class="dotlang" style="--c:#5eb1ff"></i>Python</span>
-          <p class="repo__desc">Real-time human detection using a pretrained OpenCV model, tuned for low-light accuracy on embedded hardware.</p>
-          <a class="repo__link" href="https://github.com/Ekalaivans/human-presence-detection" target="_blank" rel="noopener">view →</a>
-        </article>
-
-        <article class="repo">
-          <h3 class="repo__name">Temperature-based-fan-control-system</h3>
-          <span class="repo__lang"><i class="dotlang" style="--c:#f1c40f"></i>C</span>
-          <p class="repo__desc">Automatic fan speed control on STM32F407, closing the loop on live temperature readings.</p>
-          <a class="repo__link" href="https://github.com/Ekalaivans/Temperature-based-fan-control-system" target="_blank" rel="noopener">view →</a>
-        </article>
-
-        <article class="repo">
-          <h3 class="repo__name">stm32-distance-measurement</h3>
-          <span class="repo__lang"><i class="dotlang" style="--c:#f1c40f"></i>C</span>
-          <p class="repo__desc">Ultrasonic distance measurement on STM32, driven straight from timer and GPIO registers.</p>
-          <span class="repo__link repo__link--soon">repo: private</span>
-        </article>
-
-        <article class="repo">
-          <h3 class="repo__name">STM32F446RE-led-blink</h3>
-          <span class="repo__lang"><i class="dotlang" style="--c:#f1c40f"></i>C</span>
-          <p class="repo__desc">Bare-metal GPIO control on the STM32F446RE Nucleo board — register-level, no HAL shortcuts.</p>
-          <a class="repo__link" href="https://github.com/Ekalaivans/STM32F446RE-led-blink" target="_blank" rel="noopener">view →</a>
-        </article>
-
-        <article class="repo">
-          <h3 class="repo__name">STM32F4-Discover-onboard-LED-S-BLINK</h3>
-          <span class="repo__lang"><i class="dotlang" style="--c:#f1c40f"></i>C</span>
-          <p class="repo__desc">Driving all onboard LEDs on the STM32F4 Discovery board direct from registers.</p>
-          <a class="repo__link" href="https://github.com/Ekalaivans/STM32F4-Discover-onboard-LED-S-BLINK" target="_blank" rel="noopener">view →</a>
-        </article>
-      </div>
-
-      <p class="learning-note">Also cutting teeth on Raspberry Pi and PIC16F fundamentals alongside the STM32 and ESP work above.</p>
-
-      <a class="see-all" href="https://github.com/Ekalaivans?tab=repositories" target="_blank" rel="noopener">ls -la github.com/Ekalaivans →</a>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
+  <!-- PROFESSIONAL EXPERIENCE -->
   <section class="section" id="experience">
     <div class="wrap">
-      <p class="eyebrow">~/experience --verbose</p>
-      <h2 class="h2">where the firmware ships</h2>
+      <div class="section-header">
+        <p class="eyebrow">// PRODUCTION EXPERIENCE</p>
+        <h2 class="h2">Where the Firmware Ships</h2>
+        <p class="section-desc">1.5+ years of industrial control, real-time Linux, and hardware integration.</p>
+      </div>
 
-      <div class="job">
-        <div class="job__meta">
-          <span class="job__role">Embedded Software Developer</span>
-          <span class="job__time">Mar 2025 — present</span>
+      <div class="experience-card">
+        <div class="exp-header">
+          <div>
+            <h3 class="exp-title">Embedded Software Developer</h3>
+            <div class="exp-company">ERL Spectra Pvt Ltd, Chennai</div>
+          </div>
+          <div class="exp-date">March 2025 — Present</div>
         </div>
-        <div class="job__org">ERL Sensors and Automation, Chennai</div>
 
-        <div class="subjob">
-          <h4 class="subjob__title">// NSK steering EPS test bench</h4>
-          <ul class="joblist">
-            <li>Started on this platform as a debugger, isolating faults in EtherCAT communication and sensor feedback before moving into feature firmware.</li>
-            <li>Built C/C++ firmware on Linux with EtherCAT real-time communication, hitting sub-1ms control loop latency for precision torque and angle measurement.</li>
+        <div class="exp-visual">
+          <img src="assets/testbench_visual.jpg" alt="Automotive Hydraulic Suspension Test Bench System" class="exp-img">
+          <div class="exp-visual__caption">
+            <span>HYDRIVE Automotive Servo/Hydraulic Testbench Architecture (Japan & Thailand Deployments)</span>
+          </div>
+        </div>
+
+        <div class="exp-body">
+          <div class="exp-block">
+            <h4 class="exp-block__title">⚡ HYDRIVE Automotive Hydraulic & Servo Test Bench</h4>
+            <ul class="exp-list">
+              <li>Engineered real-time adaptive PID force and displacement control algorithms for dynamic automotive suspension testing.</li>
+              <li>Achieved <strong>deterministic 1ms control loop timing</strong> on PREEMPT_RT and Xenomai Real-Time Linux kernels.</li>
+              <li>Integrated <strong>Beckhoff EtherCAT I/O modules</strong> with <strong>Mitsubishi servo drivers</strong> via the open-source IgH EtherCAT master stack.</li>
+              <li>Executed full end-to-end Hardware/Software Integration (HSI), from electrical schematics to C++ application firmware and GUI.</li>
+              <li>Supported successful international customer deployments in <strong>Japan and Thailand</strong> with <strong>zero critical post-deployment defects</strong>.</li>
+            </ul>
+          </div>
+
+          <div class="exp-block">
+            <h4 class="exp-block__title">🔧 NSK EPS Steering Test Bench Debugging & Firmware</h4>
+            <ul class="exp-list">
+              <li>Isolated complex EtherCAT bus timing faults and sensor noise calibration issues using oscilloscopes and logic analyzers.</li>
+              <li>Developed low-level drivers for precision torque and steering angle sensor feedback under high dynamic loading.</li>
+            </ul>
+          </div>
+
+          <div class="exp-block">
+            <h4 class="exp-block__title">🛡️ Safety, Quality & Test Automation</h4>
+            <ul class="exp-list">
+              <li>Enforced <strong>MISRA C guidelines</strong>, hardware watchdogs, and ISO 26262 functional safety emergency-stop logic.</li>
+              <li>Architected a <strong>Python test-automation framework</strong> with CAN (Kvaser) diagnostics, cutting manual testing effort by <strong>40%</strong> and boosting test coverage from <strong>60% to 85%</strong>.</li>
+              <li>Wrote Linux systemd service units and shell monitoring scripts for automated service recovery and fail-safe startup.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERNSHIP -->
+      <div class="experience-card experience-card--sub">
+        <div class="exp-header">
+          <div>
+            <h3 class="exp-title">FPGA Design & SystemVerilog Intern</h3>
+            <div class="exp-company">Object Automation PVT LTD (Remote)</div>
+          </div>
+          <div class="exp-date">Feb 2023 — March 2023</div>
+        </div>
+        <div class="exp-body">
+          <ul class="exp-list">
+            <li>Developed SystemVerilog testbenches and verified digital logic circuits (Adders, Multiplexers, Clock Dividers) using Xilinx Vivado.</li>
+            <li>Configured remote hardware access via SSH, RealVNC, and PowerShell environment scripts.</li>
           </ul>
         </div>
+      </div>
 
-        <div class="subjob">
-          <h4 class="subjob__title">// hydraulic suspension test bench</h4>
-          <ul class="joblist">
-            <li>Owned the system end-to-end — drafted the hardware schematics and wiring in AutoCAD before a single line of firmware was written.</li>
-            <li>Took it from schematic to firmware: low-level register-based drivers on Beckhoff industrial controllers, EtherCAT master–slave architecture, strict 1ms real-time control loop.</li>
-            <li>Tuned kernel-level (PREEMPT_RT) scheduling and interrupt handling to hold that timing under load across 10+ concurrent sensor channels.</li>
-            <li>Added MQTT telemetry for remote monitoring and diagnostics alongside the real-time control path.</li>
-          </ul>
-        </div>
+    </div>
+  </section>
 
-        <div class="subjob">
-          <h4 class="subjob__title">// safety, quality &amp; automation</h4>
-          <ul class="joblist">
-            <li>Applied MISRA C guidelines through the firmware, with fault detection, watchdogs, and emergency-stop protocols aligned to automotive functional safety (ISO 26262) expectations.</li>
-            <li>Built a Python test-automation framework for regression testing and data validation, cutting manual QA effort ~40% and lifting test coverage from ~60% to ~85%.</li>
-            <li>Debugged signal integrity issues in high-speed EtherCAT links and sensor calibration using oscilloscopes and logic analyzers.</li>
-          </ul>
-        </div>
+  <!-- FEATURED PROJECTS SHOWCASE -->
+  <section class="section section--dark" id="projects">
+    <div class="wrap">
+      <div class="section-header">
+        <p class="eyebrow">// FEATURED REPOSITORIES & FIRMWARE PROJECTS</p>
+        <h2 class="h2">Hardware & Embedded Engineering Portfolio</h2>
+        <p class="section-desc">Explore projects across EtherCAT industrial control, bare-metal STM32 C, and IoT telemetry.</p>
+      </div>
+
+      <!-- PROJECT FILTERS -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="industrial">EtherCAT & Industrial</button>
+        <button class="filter-btn" data-filter="stm32">STM32 Bare-Metal</button>
+        <button class="filter-btn" data-filter="iot">IoT & Sensors</button>
+        <button class="filter-btn" data-filter="fpga">FPGA & Verilog</button>
+      </div>
+
+      <!-- PROJECTS GRID -->
+      <div class="projects-grid">
+        
+        <!-- PROJECT 1 -->
+        <article class="project-card" data-category="industrial">
+          <div class="project-card__header">
+            <span class="project-tag project-tag--amber">EtherCAT / Linux</span>
+            <span class="project-status">Production Active</span>
+          </div>
+          <h3 class="project-card__title">IPC Platform API for EtherCAT Master</h3>
+          <p class="project-card__desc">
+            Custom C++ abstraction layer over the IgH EtherCAT master, hiding low-level slave state machine complexity and providing deterministic sub-1ms process data exchange for motion control applications.
+          </p>
+          <div class="project-card__tech">
+            <span>C++</span><span>IgH EtherCAT</span><span>PREEMPT_RT</span><span>Linux</span>
+          </div>
+          <div class="project-card__footer">
+            <span class="repo-badge">Private Enterprise API</span>
+            <a href="#experience" class="project-card__link">See Testbench Integration →</a>
+          </div>
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="project-card" data-category="industrial">
+          <div class="project-card__img-wrap">
+            <img src="assets/testbench_visual.jpg" alt="Hydraulic Actuator Testbench" class="project-card__img">
+          </div>
+          <div class="project-card__header">
+            <span class="project-tag project-tag--cyan">Real-Time Control</span>
+            <span class="project-status">Deployed in Japan</span>
+          </div>
+          <h3 class="project-card__title">HYDRIVE Closed-Loop Actuator Control</h3>
+          <p class="project-card__desc">
+            Complete application software for hydraulic and servo-driven test benches with closed-loop PID force and displacement regulation under dynamic loads. Integrated MQTT telemetry for remote monitoring.
+          </p>
+          <div class="project-card__tech">
+            <span>C/C++</span><span>Beckhoff IPC</span><span>Mitsubishi Servo</span><span>MQTT</span>
+          </div>
+          <div class="project-card__footer">
+            <span class="repo-badge">Industrial Deploy</span>
+            <a href="#experience" class="project-card__link">View Details →</a>
+          </div>
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="project-card" data-category="stm32">
+          <div class="project-card__img-wrap">
+            <img src="assets/stm32_mcu_visual.jpg" alt="STM32 Fan Speed Controller" class="project-card__img">
+          </div>
+          <div class="project-card__header">
+            <span class="project-tag project-tag--green">Microcontroller / C</span>
+            <span class="project-status">Open Source</span>
+          </div>
+          <h3 class="project-card__title">STM32F407 Temperature PWM Fan Controller</h3>
+          <p class="project-card__desc">
+            Automatic closed-loop thermal regulation system using STM32F407 ARM Cortex-M4. Features hardware timer PWM output, ADC temperature sampling, and dynamic fan speed curves.
+          </p>
+          <div class="project-card__tech">
+            <span>Embedded C</span><span>STM32F407</span><span>PWM</span><span>Timers</span><span>ADC</span>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/Ekalaivans/Temperature-based-fan-control-system" target="_blank" class="btn btn--sm btn--github">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub Repo →
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT 4 -->
+        <article class="project-card" data-category="iot">
+          <div class="project-card__img-wrap">
+            <img src="assets/iot_sensor_visual.jpg" alt="Smart Agriculture ESP8266" class="project-card__img">
+          </div>
+          <div class="project-card__header">
+            <span class="project-tag project-tag--amber">IoT / Wireless</span>
+            <span class="project-status">Open Source</span>
+          </div>
+          <h3 class="project-card__title">ESP8266 Automated Smart Irrigation</h3>
+          <p class="project-card__desc">
+            Automated water delivery system with ESP8266 Wi-Fi microcontroller. Real-time soil moisture threshold sensing, relay pump driver control, and MQTT telemetry dashboard.
+          </p>
+          <div class="project-card__tech">
+            <span>Embedded C</span><span>ESP8266</span><span>Wi-Fi</span><span>Moisture Sensor</span><span>Relay</span>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/Ekalaivans/smart-irrigation-system-with-ESP8266" target="_blank" class="btn btn--sm btn--github">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub Repo →
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT 5 -->
+        <article class="project-card" data-category="iot">
+          <div class="project-card__header">
+            <span class="project-tag project-tag--cyan">CV / Embedded Vision</span>
+            <span class="project-status">Open Source</span>
+          </div>
+          <h3 class="project-card__title">Human Presence Detection Pipeline</h3>
+          <p class="project-card__desc">
+            Real-time human detection computer vision pipeline tuned for low-light embedded environments using OpenCV models, achieving 92% detection accuracy on edge devices.
+          </p>
+          <div class="project-card__tech">
+            <span>Python</span><span>OpenCV</span><span>ESP8266</span><span>Edge AI</span>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/Ekalaivans/human-presence-detection" target="_blank" class="btn btn--sm btn--github">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub Repo →
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT 6 -->
+        <article class="project-card" data-category="stm32">
+          <div class="project-card__header">
+            <span class="project-tag project-tag--green">Bare-Metal C</span>
+            <span class="project-status">Open Source</span>
+          </div>
+          <h3 class="project-card__title">STM32 Bare-Metal Register Control</h3>
+          <p class="project-card__desc">
+            Direct register manipulation on STM32F446RE Nucleo & STM32F4 Discovery boards. Configured RCC clocks, GPIO bit-banding, and hardware timers without relying on HAL overhead.
+          </p>
+          <div class="project-card__tech">
+            <span>C</span><span>STM32F446RE</span><span>ARM Cortex-M4</span><span>Bare-Metal Registers</span>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/Ekalaivans/STM32F446RE-led-blink" target="_blank" class="btn btn--sm btn--github">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub Repo →
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT 7 -->
+        <article class="project-card" data-category="fpga">
+          <div class="project-card__header">
+            <span class="project-tag project-tag--cyan">FPGA / Digital Logic</span>
+            <span class="project-status">Completed</span>
+          </div>
+          <h3 class="project-card__title">FPGA Digital Logic Design (Xilinx Vivado)</h3>
+          <p class="project-card__desc">
+            SystemVerilog testbench implementation and simulation for digital logic components including hardware adders, multiplexers, demuxes, and clock dividers in Xilinx Vivado environment.
+          </p>
+          <div class="project-card__tech">
+            <span>SystemVerilog</span><span>Xilinx Vivado</span><span>K-Layout</span><span>FPGA</span>
+          </div>
+          <div class="project-card__footer">
+            <span class="repo-badge">Internship Project</span>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="section section--alt" id="contact">
+  <!-- TECHNICAL STACK & SKILL MATRIX -->
+  <section class="section" id="stack">
+    <div class="wrap">
+      <div class="section-header">
+        <p class="eyebrow">// SYSTEM ARCHITECTURE & TECH STACK</p>
+        <h2 class="h2">What Runs Under the Hood</h2>
+        <p class="section-desc">Core competencies across operating systems, communication protocols, microcontrollers, and dev tools.</p>
+      </div>
+
+      <div class="stack-matrix">
+        
+        <!-- COL 1 -->
+        <div class="stack-box">
+          <h3 class="stack-box__title"><span class="icon">🐧</span> Operating Systems & Kernels</h3>
+          <ul class="stack-box__list">
+            <li><span class="skill-name">Embedded Linux (Ubuntu / Debian)</span> <span class="badge badge--prof">Advanced</span></li>
+            <li><span class="skill-name">PREEMPT_RT Realtime Kernel</span> <span class="badge badge--prof">Production</span></li>
+            <li><span class="skill-name">Xenomai RTOS Extension</span> <span class="badge badge--prof">Production</span></li>
+            <li><span class="skill-name">RTOS & LinuxCNC</span> <span class="badge">Proficient</span></li>
+            <li><span class="skill-name">systemd & Linux Shell Scripting</span> <span class="badge">Advanced</span></li>
+          </ul>
+        </div>
+
+        <!-- COL 2 -->
+        <div class="stack-box">
+          <h3 class="stack-box__title"><span class="icon">💻</span> Programming Languages</h3>
+          <ul class="stack-box__list">
+            <li><span class="skill-name">C (Embedded / Bare-Metal)</span> <span class="badge badge--prof">Core</span></li>
+            <li><span class="skill-name">C++ (Application Layer / API)</span> <span class="badge badge--prof">Core</span></li>
+            <li><span class="skill-name">Python (QA Automation & CV)</span> <span class="badge badge--prof">Advanced</span></li>
+            <li><span class="skill-name">Bash / Linux Shell Scripting</span> <span class="badge">Advanced</span></li>
+            <li><span class="skill-name">SystemVerilog</span> <span class="badge">Foundational</span></li>
+          </ul>
+        </div>
+
+        <!-- COL 3 -->
+        <div class="stack-box">
+          <h3 class="stack-box__title"><span class="icon">🔌</span> Industrial & Fieldbus Protocols</h3>
+          <ul class="stack-box__list">
+            <li><span class="skill-name">EtherCAT (IgH Master, Sub-1ms)</span> <span class="badge badge--prof">Specialist</span></li>
+            <li><span class="skill-name">CAN Bus & Kvaser Interfaces</span> <span class="badge badge--prof">Advanced</span></li>
+            <li><span class="skill-name">UART / RS-232 / RS-485</span> <span class="badge">Advanced</span></li>
+            <li><span class="skill-name">I2C & SPI Serial Buses</span> <span class="badge">Advanced</span></li>
+            <li><span class="skill-name">MQTT / TCP/IP Networking</span> <span class="badge">Proficient</span></li>
+          </ul>
+        </div>
+
+        <!-- COL 4 -->
+        <div class="stack-box">
+          <h3 class="stack-box__title"><span class="icon">⚡</span> Silicon & Microcontrollers</h3>
+          <ul class="stack-box__list">
+            <li><span class="skill-name">STM32 (F407, F446RE ARM Cortex-M4)</span> <span class="badge badge--prof">Advanced</span></li>
+            <li><span class="skill-name">Beckhoff Industrial EtherCAT IPCs</span> <span class="badge badge--prof">Production</span></li>
+            <li><span class="skill-name">Raspberry Pi 3 / 4 / 5</span> <span class="badge">Advanced</span></li>
+            <li><span class="skill-name">ESP32 & ESP8266 IoT Modules</span> <span class="badge">Advanced</span></li>
+            <li><span class="skill-name">PIC16F Microchip MCUs</span> <span class="badge">Proficient</span></li>
+            <li><span class="skill-name">Hailo AI Accelerator</span> <span class="badge">Exploration</span></li>
+          </ul>
+        </div>
+
+        <!-- COL 5 -->
+        <div class="stack-box">
+          <h3 class="stack-box__title"><span class="icon">🛠️</span> Dev Tools & Equipment</h3>
+          <ul class="stack-box__list">
+            <li><span class="skill-name">Oscilloscope & Logic Analyzer</span> <span class="badge badge--prof">Hardware Lab</span></li>
+            <li><span class="skill-name">MATLAB / Simulink</span> <span class="badge">Simulation</span></li>
+            <li><span class="skill-name">STM32CubeIDE & Keil uVision</span> <span class="badge">IDE</span></li>
+            <li><span class="skill-name">Git Version Control & Valgrind</span> <span class="badge">Toolchain</span></li>
+            <li><span class="skill-name">AutoCAD Schematics</span> <span class="badge">Wiring</span></li>
+          </ul>
+        </div>
+
+        <!-- COL 6 -->
+        <div class="stack-box">
+          <h3 class="stack-box__title"><span class="icon">📜</span> Safety & Standards</h3>
+          <ul class="stack-box__list">
+            <li><span class="skill-name">ISO 26262 Automotive Safety</span> <span class="badge badge--prof">Compliance</span></li>
+            <li><span class="skill-name">MISRA C Guidelines</span> <span class="badge badge--prof">Clean Code</span></li>
+            <li><span class="skill-name">Closed-Loop PID Tuning</span> <span class="badge badge--prof">Realtime</span></li>
+            <li><span class="skill-name">OSI Network Layer Architecture</span> <span class="badge">Protocol</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section class="section section--dark" id="education">
+    <div class="wrap">
+      <div class="section-header">
+        <p class="eyebrow">// ACADEMICS & PROFESSIONAL CREDENTIALS</p>
+        <h2 class="h2">Education & Certifications</h2>
+      </div>
+
+      <div class="edu-grid">
+        
+        <!-- DEGREE -->
+        <div class="edu-card">
+          <div class="edu-card__icon">🎓</div>
+          <div class="edu-card__content">
+            <h3 class="edu-card__degree">B.E. in Electronics & Communication Engineering</h3>
+            <div class="edu-card__school">Kongunadu College of Engineering and Technology</div>
+            <div class="edu-card__meta">
+              <span>2020 — 2024</span>
+              <span class="grade-badge">CGPA: 7.74 / 10</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="edu-card">
+          <div class="edu-card__icon">🏆</div>
+          <div class="edu-card__content">
+            <h3 class="edu-card__degree">Professional Certifications</h3>
+            <ul class="cert-list">
+              <li>
+                <strong>Deep Learning Certification</strong> — NVIDIA (2024)
+              </li>
+              <li>
+                <strong>Embedded Systems Professional Training</strong> — Pumo Technovation (2024)
+              </li>
+              <li>
+                <strong>Verilog HDL Programming Certification</strong> — Tessolve Semiconductor (2023)
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & RECRUITER ACTION FOOTER -->
+  <section class="section" id="contact">
     <div class="wrap wrap--narrow">
-      <p class="eyebrow">~/contact --open</p>
-      <h2 class="h2">get in touch</h2>
-      <p class="contact__line">Open to embedded, firmware, and industrial control roles — always glad to talk shop about EtherCAT, real-time systems, or IoT.</p>
-      <div class="contact__links">
-        <a href="https://github.com/Ekalaivans" target="_blank" rel="noopener">github.com/Ekalaivans</a>
-        <a href="https://www.linkedin.com/in/ekalaivan21/" target="_blank" rel="noopener">linkedin.com/in/ekalaivan21</a>
+      <div class="contact-box">
+        <p class="eyebrow">// LET'S BUILD STUFF THAT RUNS</p>
+        <h2 class="h2">Get In Touch With Ekalaivan</h2>
+        <p class="contact-desc">
+          Open to full-time <strong>Embedded Software Developer</strong>, <strong>Firmware Engineer</strong>, and <strong>Real-Time Systems Engineer</strong> roles in <strong>Chennai or Bangalore</strong> (Open to relocation).
+        </p>
+
+        <div class="contact-info-grid">
+          <a href="mailto:ekalaivan28@gmail.com" class="contact-item">
+            <span class="contact-item__icon">✉️</span>
+            <div>
+              <span class="contact-item__lbl">Email Address</span>
+              <span class="contact-item__val">ekalaivan28@gmail.com</span>
+            </div>
+          </a>
+
+          <a href="tel:+916379033517" class="contact-item">
+            <span class="contact-item__icon">📞</span>
+            <div>
+              <span class="contact-item__lbl">Phone Number</span>
+              <span class="contact-item__val">+91-6379033517</span>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/ekalaivan21" target="_blank" class="contact-item">
+            <span class="contact-item__icon">💼</span>
+            <div>
+              <span class="contact-item__lbl">LinkedIn Profile</span>
+              <span class="contact-item__val">linkedin.com/in/ekalaivan21</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Ekalaivans" target="_blank" class="contact-item">
+            <span class="contact-item__icon">💻</span>
+            <div>
+              <span class="contact-item__lbl">GitHub Repositories</span>
+              <span class="contact-item__val">github.com/Ekalaivans</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="contact-action-bar">
+          <a href="Ekalaivan_Resume_.pdf" target="_blank" class="btn btn--hero-primary">Download Resume PDF</a>
+          <button class="btn btn--hero-secondary" onclick="copyEmail()">Copy Email Address</button>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
 
+<!-- INTERACTIVE UNIX CLI TERMINAL MODAL DRAWER -->
+<div class="cli-drawer" id="cliDrawer" aria-hidden="true">
+  <div class="cli-window">
+    <div class="cli-bar">
+      <div class="cli-dots">
+        <span class="dot dot--red" id="cliCloseBtn"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
+      </div>
+      <div class="cli-title">ttyUSB0 — root@ekalaivan-rt-linux:~#</div>
+      <button class="cli-minimize" id="cliMinimizeBtn">✕ Close [ESC]</button>
+    </div>
+
+    <div class="cli-body" id="cliBody">
+      <div class="cli-line fg-dim">Welcome to Ekalaivan Subramanian's Embedded UNIX Shell (v2.4 RT-PREEMPT)</div>
+      <div class="cli-line fg-cyan">Type <span class="fg-amber">'help'</span> for available commands, or <span class="fg-amber">'cat resume'</span> for full background.</div>
+      <div class="cli-output" id="cliOutput"></div>
+    </div>
+
+    <div class="cli-input-bar">
+      <span class="cli-prompt">ekalaivan@rt-linux:~$</span>
+      <input type="text" id="cliInput" class="cli-input" autofocus autocomplete="off" spellcheck="false" placeholder="Type a command (e.g. help, skills, experience, ping)...">
+    </div>
+  </div>
+</div>
+
 <footer class="footer">
   <div class="wrap footer__inner">
-    <span>© <span id="year"></span> Ekalaivan Subramanian</span>
-    <span class="footer__status"><i class="statusdot"></i> status: online</span>
+    <span>© <span id="year"></span> Ekalaivan Subramanian. Built for High-Performance Real-Time Engineering.</span>
+    <span class="footer__status"><i class="statusdot"></i> STATUS: EtherCAT Master Active (1ms)</span>
   </div>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
