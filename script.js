@@ -294,14 +294,15 @@ Key Highlights:
 `,
     'ls projects': () => `
 <div class="fg-amber">REPOSITORIES & PROJECTS:</div>
- [1] Xenomai RTOS Latency Benchmarking Framework (C/C++, Alchemy API, PREEMPT_RT, Python)
- [2] IPC Platform API for EtherCAT Master (C++, IgH EtherCAT, PREEMPT_RT)
- [3] HYDRIVE Hydraulic Servo Testbench Application (Closed-Loop PID, Beckhoff)
- [4] Temperature-based Fan Speed Control (STM32F407, PWM, C)
- [5] Smart Irrigation System with ESP8266 (Wi-Fi, Sensors, C)
- [6] Human Presence Detection Pipeline (OpenCV, ESP8266, Python)
- [7] STM32 Bare-Metal Register Control (STM32F446RE, GPIO Registers)
- [8] FPGA SystemVerilog Logic Design (Xilinx Vivado)
+ [1] Xenomai RTOS 1ms Thread Sleep & Latency Benchmarking (C/C++, Alchemy API, Python)
+ [2] LinuxCNC Real-Time HAL & Kernel Latency Suite (PREEMPT_RT / Xenomai, HAL C/C++)
+ [3] IPC Platform API for EtherCAT Master (C++, IgH EtherCAT, PREEMPT_RT)
+ [4] HYDRIVE Hydraulic Servo Testbench Application (Closed-Loop PID, Beckhoff)
+ [5] Temperature-based Fan Speed Control (STM32F407, PWM, C)
+ [6] Smart Irrigation System with ESP8266 (Wi-Fi, Sensors, C)
+ [7] Human Presence Detection Pipeline (OpenCV, ESP8266, Python)
+ [8] STM32 Bare-Metal Register Control (STM32F446RE, GPIO Registers)
+ [9] FPGA SystemVerilog Logic Design (Xilinx Vivado)
 `,
     'ping ethercat': () => `
 PING ethercat0.master.local (192.168.1.100) 56(84) bytes of data.

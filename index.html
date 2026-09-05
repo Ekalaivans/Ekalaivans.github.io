@@ -286,18 +286,18 @@
       <!-- PROJECTS GRID -->
       <div class="projects-grid">
         
-        <!-- XENOMAI BENCHMARKING PROJECT -->
+        <!-- XENOMAI 1MS LATENCY BENCHMARKING PROJECT -->
         <article class="project-card" data-category="rtos industrial">
           <div class="project-card__img-wrap">
-            <img src="assets/xenomai_visual.jpg" alt="Xenomai RTOS Latency Benchmarking" class="project-card__img">
+            <img src="assets/xenomai_visual.jpg" alt="Xenomai RTOS 1ms Latency Benchmarking" class="project-card__img">
           </div>
           <div class="project-card__header">
-            <span class="project-tag project-tag--cyan">RTOS / Real-Time Linux</span>
+            <span class="project-tag project-tag--cyan">Real-Time Linux / Xenomai</span>
             <span class="project-status">Open Source</span>
           </div>
-          <h3 class="project-card__title">Xenomai RTOS Latency Benchmarking Framework</h3>
+          <h3 class="project-card__title">Xenomai RTOS 1ms Thread Sleep & Latency Benchmarking</h3>
           <p class="project-card__desc">
-            Deterministic C/C++ microsecond latency measurement framework built on the Xenomai RTOS Alchemy skin. Benchmarks 250µs busy-wait timing loops, periodic thread scheduling, CPU core isolation, and dynamic system stress loads (25%–90%) with Python telemetry visualization.
+            Deterministic C/C++ microsecond latency profiling suite on Xenomai RTOS (Alchemy API). Executes periodic 1ms thread sleep cycles (<code style="color:var(--cyan)">rt_task_sleep_until</code>) with 250µs busy-wait spinning, evaluating CPU isolation and stress loads (25%–90%) via Python telemetry scripts.
           </p>
           <div class="project-card__tech">
             <span>C/C++</span><span>Xenomai RTOS</span><span>POSIX Threads</span><span>PREEMPT_RT</span><span>Python (Pandas)</span>
@@ -306,6 +306,30 @@
             <a href="https://github.com/Ekalaivans/xenomai-report-data" target="_blank" class="btn btn--sm btn--github">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               GitHub Repo →
+            </a>
+          </div>
+        </article>
+
+        <!-- LINUXCNC LATENCY & HAL SUITE PROJECT -->
+        <article class="project-card" data-category="rtos industrial">
+          <div class="project-card__img-wrap">
+            <img src="assets/linuxcnc_visual.jpg" alt="LinuxCNC Real-Time Latency Suite" class="project-card__img">
+          </div>
+          <div class="project-card__header">
+            <span class="project-tag project-tag--amber">LinuxCNC / Real-Time Kernel</span>
+            <span class="project-status">Production Benchmarking</span>
+          </div>
+          <h3 class="project-card__title">LinuxCNC Real-Time HAL & Kernel Latency Suite</h3>
+          <p class="project-card__desc">
+            Real-time HAL component profiling and kernel latency testing framework for CNC motion control. Evaluates base-thread servo loop timing, IRQ response latencies, and thread jitter across PREEMPT_RT and Xenomai kernel configurations under multi-core CPU load.
+          </p>
+          <div class="project-card__tech">
+            <span>LinuxCNC</span><span>PREEMPT_RT</span><span>Xenomai</span><span>C/C++</span><span>HAL Components</span>
+          </div>
+          <div class="project-card__footer">
+            <a href="https://github.com/Ekalaivans" target="_blank" class="btn btn--sm btn--github">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub Repos →
             </a>
           </div>
         </article>
