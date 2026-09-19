@@ -266,22 +266,23 @@ document.addEventListener('DOMContentLoaded', () => {
 `,
     'cat resume': () => `
 <div class="fg-green">EKALAIVAN SUBRAMANIAN — EMBEDDED SOFTWARE DEVELOPER</div>
-Location: Chennai, India (Open to Bangalore relocation)
+Location: Chennai, India (Open to Bangalore & Coimbatore relocation)
 Email: ekalaivan28@gmail.com | Phone: +91-6379033517
 Education: B.E. ECE — Kongunadu College of Engineering (CGPA: 7.74/10)
 
 <div class="fg-amber">PROFESSIONAL SUMMARY:</div>
-1.5+ years building real-time EtherCAT-based industrial control systems for automotive
+1.5+ years building real-time EtherCAT & CAN/CAN-FD industrial control systems for automotive
 hydraulic and servo test benches (PREEMPT_RT Linux, Beckhoff IPCs, Mitsubishi Drivers).
 Deployed international systems in Japan and Thailand with ZERO critical post-deployment defects.
 `,
     'cat skills': () => `
 <div class="fg-amber">TECH MATRIX & FIRMWARE STACK:</div>
-• OS & Kernels  : PREEMPT_RT Linux, Xenomai, Embedded Linux, RTOS, systemd
-• Languages     : C (Bare-Metal), C++ (IPC API), Python (QA Automation), Bash, SystemVerilog
-• Protocols     : EtherCAT (IgH Master, Sub-1ms), CAN (Kvaser), MQTT, UART, I2C, SPI, TCP/IP
-• Microchip/MCUs: STM32F407, STM32F446RE, Beckhoff IPC, Raspberry Pi 3/4/5, ESP32, PIC16F
-• Standards     : ISO 26262 Automotive Safety, MISRA C, Closed-Loop PID
+• OS & Kernels  : PREEMPT_RT Linux, Xenomai, Embedded Linux, RTOS, systemd, LinuxCNC
+• Languages     : Embedded C, Embedded C++, Python (QA & CV), Shell Scripting, SystemVerilog
+• Protocols     : EtherCAT (IgH Master, Sub-1ms), CAN / CAN-FD (Kvaser), MQTT, UART, I2C, SPI, TCP/IP
+• Silicon/MCUs  : STM32 (F407, F446RE), TI AM243x, Beckhoff IPC, Raspberry Pi 3/4/5, ESP32, PIC16F
+• Tools & QA    : cyclictest, stress-ng, Wireshark, MATLAB/Simulink, STM32CubeIDE, Keil, Proteus
+• Standards     : ISO 26262 Automotive Safety, MISRA C/C++, V-Model SDLC, AUTOSAR Fundamentals
 `,
     'cat experience': () => `
 <div class="fg-green">EXPERIENCE — ERL SPECTRA PVT LTD (Mar 2025 – Present)</div>
@@ -289,6 +290,8 @@ Role: Embedded Software Developer (Chennai)
 Key Highlights:
  ⚡ Engineered closed-loop PID algorithms for HYDRIVE hydraulic testbench (1ms RT loop).
  ⚡ Integrated Beckhoff EtherCAT I/O & Mitsubishi servo drivers on PREEMPT_RT Linux.
+ ⚡ Conducted CAN / CAN-FD data validation & network diagnostics via MATLAB/Kvaser.
+ ⚡ Benchmarked real-time latency/jitter using cyclictest, stress-ng & CPU isolation (isolcpus, taskset).
  ⚡ Deployed test benches to Japan & Thailand with zero post-deployment defects.
  ⚡ Built Python QA test automation cutting testing time by 40% and boosting coverage to 85%.
 `,
